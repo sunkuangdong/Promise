@@ -1,8 +1,29 @@
-## Welcome to GitHub Pages
+## 手写Promise
 
-You can use the [editor on GitHub](https://github.com/sunkuangdong/Promise/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+为什么我们要学习手写Promise呢？通过思考以下一系列问题来回答这个问题
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+* 该技术要解决什么问题?
+* 该技术是怎么解决它的?
+* 该技术有什么优点?
+* 该技术有什么缺点?
+* 如何解决这些缺点?
+
+
+
+我们来回答上面的问题:
+
+* 能够解决回调地狱问题。
+* 解决回调地狱是通过.then和.cache的方式
+* 减少了代码缩进，解决了阅读困难。
+
+
+
+Promise的完整API
+
+* 类属性：length
+* 类方法：all / allSettled / race / reject / resolve
+* 对象属性：then(重要) / finally / catch
+* 对象内部属性：state = pending / fulfilled / rejected
 
 ### Markdown
 
