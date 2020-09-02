@@ -303,7 +303,7 @@ yarn add --dev @types/chai @types/mocha
               if (this.state !== "pending") return;
               this.state = 'rejected';
               if (typeof this.fail === 'function') {
-                  this.fail.call(this, reason);
+                  this.fail.call(undefined, reason);
               }
           }, 0)
       }
@@ -356,7 +356,7 @@ yarn add --dev @types/chai @types/mocha
                   if (this.state !== "pending") return;
                   this.state = 'rejected';
                   if (typeof handle[1] === 'function') {
-                      handle[1].call(this, reason);
+                      handle[1].call(undefined, reason);
                   }
               })
           }, 0)

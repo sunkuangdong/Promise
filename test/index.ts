@@ -136,7 +136,7 @@ describe("Promise", () => {
             done()
         })
     })
-    it("then可以在同一个promise里被多次调用, 测试rejected", (done) => {
+    it("then可以在同一个promise里被多次调用, 测试resolve", (done) => {
         const promise = new Promise(resolve => {
             resolve();
         });
@@ -151,7 +151,7 @@ describe("Promise", () => {
             assert(callbacks[1].calledAfter(callbacks[0]))
             assert(callbacks[2].calledAfter(callbacks[1]))
             done();
-        }, 0)
+        })
     })
     it("then可以在同一个promise里被多次调用, 测试rejected", (done) => {
         const promise = new Promise((resolve, reject) => {
@@ -168,6 +168,6 @@ describe("Promise", () => {
             assert(callbacks[1].calledAfter(callbacks[0]))
             assert(callbacks[2].calledAfter(callbacks[1]))
             done();
-        }, 0)
+        })
     })
 })
